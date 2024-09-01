@@ -1,0 +1,37 @@
+.table {
+  font-size: 20px;
+  width: 100%;
+}
+
+.row:nth-child(2n) {
+  background-color: #f2f2f2;
+}
+
+.cell {
+  border-bottom: 1px solid #dee2e6;
+  padding: 8px;
+}
+
+.btnSort {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  margin: 0 auto 8px auto;
+  font-weight: 600;
+  cursor: pointer;
+  & span {
+    color: #dee2e6;
+    font-weight: 400;
+  }
+}
+
+.inputFilter {
+  display: block;
+  width: 100%;
+  border: 1px solid #dee2e6;
+  background-color: transparent;
+  padding: 8px;
+  /* margin: 0 auto 8px auto; */
+}
