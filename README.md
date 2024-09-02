@@ -1,4 +1,4 @@
-# Ecosolution
+# User management table
 
 ![Main page screenshot](/public/example.png)
 
