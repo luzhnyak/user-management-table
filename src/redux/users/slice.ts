@@ -5,6 +5,7 @@ import { IUser } from "../../types";
 export interface IUserInitialState {
   users: IUser[];
   filters: { name: string; username: string; email: string; phone: string };
+  sort: { name: keyof IUser; asc: boolean };
   isLoading: boolean;
   error: SerializedError | null;
 }
@@ -12,6 +13,7 @@ export interface IUserInitialState {
 const userInitialState: IUserInitialState = {
   users: [],
   filters: { name: "", username: "", email: "", phone: "" },
+  sort: { name: "id", asc: false },
   isLoading: false,
   error: null,
 };
@@ -22,6 +24,9 @@ const userSlice = createSlice({
   reducers: {
     setFilters: (state, { payload: { name, username, email, phone } }) => {
       state.filters = { name, username, email, phone };
+    },
+    setSort: (state, { payload }) => {
+      state.sort = payload;
     },
   },
   extraReducers: (builder) =>
@@ -41,5 +46,5 @@ const userSlice = createSlice({
       }),
 });
 
-export const { setFilters } = userSlice.actions;
+export const { setFilters, setSort } = userSlice.actions;
 export const userReducer = userSlice.reducer;

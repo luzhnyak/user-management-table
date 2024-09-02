@@ -1,0 +1,47 @@
+.btnSort {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  margin: 0 auto 8px auto;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ascSymbol {
+  color: #dee2e6;
+  font-weight: 400;
+}
+
+.title {
+  color: black;
+}
+
+.title::first-letter {
+  text-transform: uppercase;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputFilter {
+  display: block;
+  width: 100%;
+  border: 1px solid #dee2e6;
+  background-color: transparent;
+  padding: 8px 4px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.clearInputBtn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
