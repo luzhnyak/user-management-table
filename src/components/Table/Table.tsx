@@ -35,17 +35,17 @@ const Table = () => {
 
   useEffect(() => {
     if (sort.asc) {
-      setDisplayedUsers([
-        ...filteredUsers.sort((a, b) => {
+      setDisplayedUsers(
+        [...filteredUsers].sort((a, b) => {
           return a[sort.name].toString().localeCompare(b[sort.name].toString());
-        }),
-      ]);
+        })
+      );
     } else {
-      setDisplayedUsers([
-        ...filteredUsers.sort((a, b) => {
+      setDisplayedUsers(
+        [...filteredUsers].sort((a, b) => {
           return b[sort.name].toString().localeCompare(a[sort.name].toString());
-        }),
-      ]);
+        })
+      );
     }
   }, [sort, filteredUsers]);
 
